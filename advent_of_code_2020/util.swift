@@ -25,3 +25,8 @@ func readFile(file: String) -> Array<String> {
     }
     return textArray
 }
+
+func charAt(word: String, at: Int) -> String {
+    let index = word.index(word.startIndex, offsetBy: at)
+    return String(word[index])
+}

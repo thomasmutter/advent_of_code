@@ -8,11 +8,6 @@
 
 import Foundation
 
-func charAt(word: String, at: Int) -> String {
-    let index = word.index(word.startIndex, offsetBy: at-1)
-    return String(word[index])
-}
-
 func decode(encoding: String) -> (Array<Int>, Character, String) {
     let passwordArray: Array<String> = encoding.components(separatedBy: " ")
     let boundaries: Array<Int> = passwordArray[0].components(separatedBy: "-").map { Int($0)! }
@@ -28,7 +23,7 @@ func validPassOld(boundaries: Array<Int>, toMatch: Character, password: String) 
 }
 
 func validPassNew(boundaries: Array<Int>, toMatch: Character, password: String) -> Bool {
-    let matchCount = (charAt(word: password, at: boundaries[0]) + charAt(word: password, at: boundaries[1])).filter { $0 == toMatch }.count
+    let matchCount = (charAt(word: password, at: boundaries[0]-1) + charAt(word: password, at: boundaries[1]-1)).filter { $0 == toMatch }.count
     return matchCount == 1
 }
 

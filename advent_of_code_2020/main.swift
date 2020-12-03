@@ -8,7 +8,4 @@
 
 import Foundation
 
-print(solveP1())
-
-print(solveP2())
-
+solveP3()

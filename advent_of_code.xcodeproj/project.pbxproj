@@ -11,6 +11,7 @@
 		67558DBA2578F8F00001EA0C /* aoc_puzzle1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67558DB92578F8F00001EA0C /* aoc_puzzle1.swift */; };
 		67558DC02579032B0001EA0C /* aoc_puzzle2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67558DBF2579032B0001EA0C /* aoc_puzzle2.swift */; };
 		67558DC5257918B90001EA0C /* util.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67558DC4257918B90001EA0C /* util.swift */; };
+		67558DC825794D4E0001EA0C /* aoc_puzzle3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67558DC725794D4E0001EA0C /* aoc_puzzle3.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -31,6 +32,7 @@
 		67558DB92578F8F00001EA0C /* aoc_puzzle1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = aoc_puzzle1.swift; sourceTree = "<group>"; };
 		67558DBF2579032B0001EA0C /* aoc_puzzle2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = aoc_puzzle2.swift; sourceTree = "<group>"; };
 		67558DC4257918B90001EA0C /* util.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = util.swift; sourceTree = "<group>"; };
+		67558DC725794D4E0001EA0C /* aoc_puzzle3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = aoc_puzzle3.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 		67558DB12577B9B00001EA0C /* advent_of_code_2020 */ = {
 			isa = PBXGroup;
 			children = (
+				67558DC625794D270001EA0C /* day3 */,
 				67558DB22577B9B00001EA0C /* main.swift */,
 				67558DBC257903040001EA0C /* day2 */,
 				67558DBB2578FC0D0001EA0C /* day1 */,
@@ -85,6 +88,14 @@
 				67558DBF2579032B0001EA0C /* aoc_puzzle2.swift */,
 			);
 			path = day2;
+			sourceTree = "<group>";
+		};
+		67558DC625794D270001EA0C /* day3 */ = {
+			isa = PBXGroup;
+			children = (
+				67558DC725794D4E0001EA0C /* aoc_puzzle3.swift */,
+			);
+			path = day3;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -145,6 +156,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				67558DC825794D4E0001EA0C /* aoc_puzzle3.swift in Sources */,
 				67558DB32577B9B00001EA0C /* main.swift in Sources */,
 				67558DBA2578F8F00001EA0C /* aoc_puzzle1.swift in Sources */,
 				67558DC02579032B0001EA0C /* aoc_puzzle2.swift in Sources */,
