@@ -11,28 +11,6 @@ import Foundation
 let file = "input_p1.txt"
 let year = 2020
 
-
-func readFile(file: String) -> Array<Int> {
-    var values = [Int]()
-    if let dir = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first {
-        let fileURL = dir.appendingPathComponent(file)
-        
-        
-        do {
-            let text = try String(contentsOf: fileURL, encoding: .utf8)
-            var textArray = text.components(separatedBy: "\n")
-            textArray.removeLast()
-            values = textArray.map {Int($0)!}
-        }
-        catch {
-            print("Couldnt read file")
-        }
-    }
-    return values
-}
-
-
-
 func find(max: Int, values: Array<Int>) -> Int {
     for value in values {
         if let x = values.first(where: { $0 == max - value && $0 + value <= max}) {
@@ -42,7 +20,8 @@ func find(max: Int, values: Array<Int>) -> Int {
     return -1
 }
 
-func solve(values: Array<Int>) -> Int {
+func solveP1() -> Int {
+    let values = readFile(file: file).map {Int($0)!}
     for value in values {
         let max: Int = 2020 - value
         let y = find(max: max, values: values)

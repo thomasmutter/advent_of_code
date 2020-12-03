@@ -8,6 +8,7 @@
 
 import Foundation
 
-print(solve(values: readFile(file: "input_p1.txt")))
+print(solveP1())
 
+print(solveP2())
 
