@@ -8,7 +8,7 @@
 
 import Foundation
 
-let road = readFile(file: "input_p3.txt")
+let road = readInput(fileName: "input_p3.txt")
 let length = road[0].count
 
 let rightArray = [1, 3, 5, 7, 1]

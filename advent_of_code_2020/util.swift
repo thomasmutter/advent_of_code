@@ -9,19 +9,17 @@
 import Foundation
 
 
-func readFile(file: String) -> Array<String> {
+func readInput(fileName: String, separator: String = "\n") -> Array<String> {
+    let path = URL(fileURLWithPath: "/Users/thomas.mutter/XcodeProjects/advent_of_code/advent_of_code_2020/inputs/")
+    let fileURL = path.appendingPathComponent(fileName)
     var textArray = [String]()
-    if let dir = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first {
-        let fileURL = dir.appendingPathComponent(file)
-        
-        do {
-            let text = try String(contentsOf: fileURL, encoding: .utf8)
-            textArray = text.components(separatedBy: "\n")
-            textArray.removeLast()
-        }
-        catch {
-            print("Couldnt read file")
-        }
+    do {
+        let contents = try String(contentsOf: fileURL, encoding: .utf8)
+        textArray = contents.components(separatedBy: separator)
+        textArray.removeLast()
+
+    } catch {
+        print("File not found")
     }
     return textArray
 }

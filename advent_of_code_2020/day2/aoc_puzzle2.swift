@@ -29,7 +29,7 @@ func validPassNew(boundaries: Array<Int>, toMatch: Character, password: String) 
 
 
 func solveP2() {
-    let passwords = readFile(file: "input_p2.txt")
+    let passwords = readInput(fileName: "input_p2.txt")
     var oldCount = 0
     var newCount = 0
     for encoding in passwords {

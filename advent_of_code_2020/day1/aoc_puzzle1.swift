@@ -21,7 +21,7 @@ func find(max: Int, values: Array<Int>) -> Int {
 }
 
 func solveP1() -> Int {
-    let values = readFile(file: file).map {Int($0)!}
+    let values = readInput(fileName: file).map {Int($0)!}
     for value in values {
         let max: Int = 2020 - value
         let y = find(max: max, values: values)

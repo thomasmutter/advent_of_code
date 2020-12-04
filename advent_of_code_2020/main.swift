@@ -8,4 +8,5 @@
 
 import Foundation
 
-solveP3()
+solveP4()
+
