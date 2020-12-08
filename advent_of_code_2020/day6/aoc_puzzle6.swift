@@ -12,7 +12,7 @@ let answers = readInput(fileName: "input_p6.txt", separator: "\n\n")
 
 func findCommonCharacters(text: String) -> Int {
     let a = text.split(separator: "\n").map{ String($0) }
-    return a.reduce(a[0], { x, y in String(Set(x).intersection(Set(y)))}).count
+    return a.reduce(a[0], { x, y in String(Set(x).intersection(Set(y))) }).count
 }
 
 func solveP6() {

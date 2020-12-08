@@ -15,6 +15,7 @@
 		67558DCB257A3D290001EA0C /* aoc_puzzle4.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67558DCA257A3D290001EA0C /* aoc_puzzle4.swift */; };
 		67558DFB257BB5F80001EA0C /* aoc_puzzle5.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67558DFA257BB5F80001EA0C /* aoc_puzzle5.swift */; };
 		67558DFE257EC1C10001EA0C /* aoc_puzzle6.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67558DFD257EC1C10001EA0C /* aoc_puzzle6.swift */; };
+		67558E01257FA2C50001EA0C /* aoc_puzzle7.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67558E00257FA2C50001EA0C /* aoc_puzzle7.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -42,6 +43,7 @@
 		67558DF8257A75580001EA0C /* inputs */ = {isa = PBXFileReference; lastKnownFileType = folder; path = inputs; sourceTree = "<group>"; };
 		67558DFA257BB5F80001EA0C /* aoc_puzzle5.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = aoc_puzzle5.swift; sourceTree = "<group>"; };
 		67558DFD257EC1C10001EA0C /* aoc_puzzle6.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = aoc_puzzle6.swift; sourceTree = "<group>"; };
+		67558E00257FA2C50001EA0C /* aoc_puzzle7.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = aoc_puzzle7.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +84,7 @@
 		67558DB12577B9B00001EA0C /* advent_of_code_2020 */ = {
 			isa = PBXGroup;
 			children = (
+				67558DFF257FA2AF0001EA0C /* day7 */,
 				67558DFC257EC1AD0001EA0C /* day6 */,
 				67558DF9257BB5DA0001EA0C /* day5 */,
 				67558DF8257A75580001EA0C /* inputs */,
@@ -141,6 +144,14 @@
 				67558DFD257EC1C10001EA0C /* aoc_puzzle6.swift */,
 			);
 			path = day6;
+			sourceTree = "<group>";
+		};
+		67558DFF257FA2AF0001EA0C /* day7 */ = {
+			isa = PBXGroup;
+			children = (
+				67558E00257FA2C50001EA0C /* aoc_puzzle7.swift */,
+			);
+			path = day7;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -267,6 +278,7 @@
 				67558DC02579032B0001EA0C /* aoc_puzzle2.swift in Sources */,
 				67558DCB257A3D290001EA0C /* aoc_puzzle4.swift in Sources */,
 				67558DFE257EC1C10001EA0C /* aoc_puzzle6.swift in Sources */,
+				67558E01257FA2C50001EA0C /* aoc_puzzle7.swift in Sources */,
 				67558DC5257918B90001EA0C /* util.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
