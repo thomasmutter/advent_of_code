@@ -26,14 +26,11 @@ func findContagiousSum(result: Int) -> Int {
     var sum = 0
     var lowerBound = 0
     var upperBound = 0
-    var iterator = numbers.makeIterator()
-    while let next = iterator.next() {
-        sum += next
-        if sum > result{
-            while sum > result {
-                sum -= numbers[lowerBound]
-                lowerBound += 1
-            }
+    while lowerBound < numbers.count {
+        sum += numbers[upperBound]
+        while sum > result {
+            sum -= numbers[lowerBound]
+            lowerBound += 1
         }
         if sum == result {
             break
