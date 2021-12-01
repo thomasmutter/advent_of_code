@@ -8,4 +8,4 @@
 
 import Foundation
 
-solveP9()
+print(countNumberOfSlidingWindowIncreases())

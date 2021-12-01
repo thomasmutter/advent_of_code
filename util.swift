@@ -10,7 +10,7 @@ import Foundation
 
 
 func readInput(fileName: String, separator: String = "\n") -> Array<String> {
-    let path = URL(fileURLWithPath: "/Users/thomas.mutter/XcodeProjects/advent_of_code/advent_of_code_2020/inputs/")
+    let path = URL(fileURLWithPath: "/Users/thomas.mutter/XcodeProjects/advent_of_code/inputs/")
     let fileURL = path.appendingPathComponent(fileName)
     var textArray = [String]()
     do {
