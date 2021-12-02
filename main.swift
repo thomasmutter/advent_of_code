@@ -8,4 +8,4 @@
 
 import Foundation
 
-print(countNumberOfSlidingWindowIncreases())
+print(computePositionWithAim())
