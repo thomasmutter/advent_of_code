@@ -8,4 +8,4 @@
 
 import Foundation
 
-print(computePositionWithAim())
+findO2GenAndCO2ScrubRatings()
