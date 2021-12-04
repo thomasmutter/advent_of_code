@@ -28,3 +28,14 @@ func charAt(word: String, at: Int) -> String {
     let index = word.index(word.startIndex, offsetBy: at)
     return String(word[index])
 }
+
+extension String {
+    // from https://coderedirect.com/questions/408155/swift-splitting-strings-with-regex-ignoring-search-string
+    func split(usingRegex pattern: String) -> [String] {
+        let range = NSRange(location: 0, length: self.utf16.count)
+        let regex = try! NSRegularExpression(pattern: pattern)
+        let matches = regex.matches(in: self, range: range)
+        let ranges = [startIndex..<startIndex] + matches.map{Range($0.range, in: self)!} + [endIndex..<endIndex]
+        return (0...matches.count).map {String(self[ranges[$0].upperBound..<ranges[$0+1].lowerBound])}
+    }
+}

@@ -8,4 +8,5 @@
 
 import Foundation
 
-findO2GenAndCO2ScrubRatings()
+playBingo()
+letSquidWin()
