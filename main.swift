@@ -8,5 +8,5 @@
 
 import Foundation
 
-countOverlappingHorizontalAndVerticalLines()
-countAllOverlappingLines()
+computeTotalNumberOfLanternFish(afterDays: 80)
+computeTotalNumberOfLanternFish(afterDays: 256)
