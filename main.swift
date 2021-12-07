@@ -8,5 +8,7 @@
 
 import Foundation
 
-computeTotalNumberOfLanternFish(afterDays: 80)
-computeTotalNumberOfLanternFish(afterDays: 256)
+bruteForceFuelMinimalization(for: constantFuelComputation)
+bruteForceFuelMinimalization(for: incrementingFuelComputation)
+
+
