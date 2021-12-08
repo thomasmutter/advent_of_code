@@ -8,7 +8,5 @@
 
 import Foundation
 
-bruteForceFuelMinimalization(for: constantFuelComputation)
-bruteForceFuelMinimalization(for: incrementingFuelComputation)
-
-
+countEasyDigits()
+addAllOutputDigits()
