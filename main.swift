@@ -8,5 +8,5 @@
 
 import Foundation
 
-countEasyDigits()
-addAllOutputDigits()
+print(lavaTubeSystem.computeRiskLevel())
+print(lavaTubeSystem.findThreeLargestBasins().reduce(1, *))
