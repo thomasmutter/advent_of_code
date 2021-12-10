@@ -8,5 +8,6 @@
 
 import Foundation
 
-print(lavaTubeSystem.computeRiskLevel())
-print(lavaTubeSystem.findThreeLargestBasins().reduce(1, *))
+let navigationSystem = NavigationSubsystem()
+print(navigationSystem.totalSyntaxErrorScore)
+print(navigationSystem.lineRepairScore)
