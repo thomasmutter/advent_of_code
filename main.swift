@@ -8,6 +8,5 @@
 
 import Foundation
 
-let navigationSystem = NavigationSubsystem()
-print(navigationSystem.totalSyntaxErrorScore)
-print(navigationSystem.lineRepairScore)
+print(dumboOctopusHabitat.modelOctopiBehaviour(for: 100))
+print(dumboOctopusHabitat.findFirstSynchronizedFlash())
