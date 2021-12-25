@@ -8,5 +8,7 @@
 
 import Foundation
 
-print(dumboOctopusHabitat.modelOctopiBehaviour(for: 100))
-print(dumboOctopusHabitat.findFirstSynchronizedFlash())
+
+var n = OceanTrenchSeaFloor()
+n.findLandingPosition()
+
