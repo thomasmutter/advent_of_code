@@ -1,4 +1,4 @@
-import System.Posix (LockRequest(ReadLock))
+
 main :: IO()
 main = do
        contents <- readFile "input.txt"
