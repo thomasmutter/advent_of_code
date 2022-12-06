@@ -11,14 +11,14 @@ data MoveStep = MoveStep {
 main :: IO()
 main = do
        contents <- readFile "input.txt"
-       print (solvePartOne (mapTuple (initialStacks (indexPositions 9)) (map (parseMoveStep . parseInstruction)) (listToTuple . parseInput . lines $ contents)))
-       print (solvePartTwo (mapTuple (initialStacks (indexPositions 9)) (map (parseMoveStep . parseInstruction)) (listToTuple . parseInput . lines $ contents)))
+       print . solvePartOne . mapTuple (initialStacks (indexPositions 9)) (map (parseMoveStep . parseInstruction)) . listToTuple . parseInput . lines $ contents
+       print . solvePartTwo . mapTuple (initialStacks (indexPositions 9)) (map (parseMoveStep . parseInstruction)) . listToTuple . parseInput . lines $ contents
 
 solvePartOne :: (Stacks, [MoveStep]) -> String
-solvePartOne (stacks, steps) = topCrates (rearrange steps stacks)
+solvePartOne (stacks, steps) = (topCrates . rearrange steps) stacks
 
 solvePartTwo :: (Stacks, [MoveStep]) -> String
-solvePartTwo (stacks, steps) = topCrates (rearrange' stacks steps)
+solvePartTwo (stacks, steps) = (topCrates . rearrange' stacks) steps
 
 readInt :: String -> Int
 readInt = read
@@ -31,9 +31,8 @@ parseInput [] = []
 parseInput xs = takeWhile (not . null) xs : parseInput (drop 1 (dropWhile (not . null) xs))
 
 listToTuple :: [a] -> (a,a)
-listToTuple [] = error "Not enough elements"
-listToTuple [x] = error "Not enough elements"
 listToTuple (x:y:_) = (x,y)
+listToTuple _ = error "Not enough elements"
 
 indexOf :: Int -> Int
 indexOf n = n + 3 * (n - 1)
@@ -63,14 +62,12 @@ parseInstruction str =  readInt number : parseInstruction rest
         (number, rest) = span isNumber (dropWhile (not . isNumber) str)
 
 parseMoveStep :: [Int] -> MoveStep
-parseMoveStep [] = error "not enough elements"
-parseMoveStep [x] = error "not enough elements"
-parseMoveStep [x,y] = error "not enough elements"
 parseMoveStep (x:y:z:_) = MoveStep {
     quantity = x,
     source = y,
     target = z
 }
+parseMoveStep _ = error "Can not convert to MoveStep. Not enough elements"
 
 move :: (Int, [Char]) -> Int -> Stacks -> Stacks
 move (_, []) _ stacks = stacks
