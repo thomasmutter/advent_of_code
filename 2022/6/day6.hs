@@ -6,10 +6,10 @@ main = do
        print . solvePartTwo $ contents
 
 solvePartOne :: String -> Int
-solvePartOne = detectMarker
+solvePartOne = detectUnique 4
 
 solvePartTwo :: String -> Int
-solvePartTwo = detectMessage
+solvePartTwo = detectUnique 14
 
 detectMarker :: String -> Int
 detectMarker = go 0
@@ -23,6 +23,10 @@ detectMessage = go 0
         go n (a:b:c:d:e:f:g:h:j:i:k:l:m:o:xs) = if unique [a,b,c,d,e,f,g,h,j,i,k,l,m,o] then n + 14 else go (n+1) (b:c:d:e:f:g:h:j:i:k:l:m:o:xs)
         go _ _ = error "No marker found"
 
+detectUnique :: Int -> String -> Int
+detectUnique n str
+    | (unique . take n) str = n
+    | otherwise = 1 + detectUnique n (drop 1 str)
 
 unique :: [Char] -> Bool
 unique [] = True
