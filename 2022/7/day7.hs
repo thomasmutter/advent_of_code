@@ -2,7 +2,7 @@ import Data.Char ( isSpace )
 
 data Dir a
     = Dir a [Dir a]
-    | File String Int
+    | File Int
     deriving (Show)
 
 main :: IO()
@@ -11,6 +11,7 @@ main = do
        print . solvePartOne . lines $ fileContents
        print . solvePartTwo . lines $ fileContents
 
+-- This doesnt work if the root directory was smaller than 100000
 solvePartOne :: [String] -> Int
 solvePartOne = sum . filter (<100000) . dirSizes . rootDirectories
 
@@ -44,18 +45,19 @@ contents _ (_,[])             = []
 parseEntryParts :: [String] -> Int -> (String, String) -> Dir String
 parseEntryParts con n (l, r)
     | l == "dir" = Dir r (contents r (jumpTo (r, n+1) (n+1) con))
-    | otherwise  = File r (readInt l)
+    | otherwise  = File (readInt l)
 
 dirEntryParts :: String -> (String, String)
 dirEntryParts str = let (l, r) = break isSpace str
                     in (l, drop 1 r)
 
 dirSize :: Dir String -> Int
-dirSize (File _ n) = n
+dirSize (File n) = n
 dirSize (Dir _ []) = 0
 dirSize (Dir _ ds) = (sum . map dirSize) ds
 
+-- Would be nice to do this without the redundant work done in dirSizes b. As all sizes computed in dirSizes b have already been seen in dirSize (Dir a b)
 dirSizes :: [Dir String] -> [Int]
 dirSizes ((Dir a b):ds) = (dirSize (Dir a b) : dirSizes ds) ++ dirSizes b
-dirSizes ((File _ _):ds) = dirSizes ds
+dirSizes ((File _):ds) = dirSizes ds
 dirSizes [] = []
